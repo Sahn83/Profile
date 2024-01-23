@@ -18,7 +18,7 @@
    <body>
       <!--==================== HEADER ====================-->
       <header class="header header-pages" id="header">
-         <nav> class="nav container"
+         <nav class="nav container"> 
          <a href="index.html" class="nav__logo"></a>
 
          <div class="nav__menu" id="nav-menu">
@@ -62,7 +62,38 @@
       <main class="main">
          <!--==================== CONTACT ====================-->
          <section class="contact section">
-            
+            <h2 class="section__title">
+               Let's talk <br>
+               About Your Project
+            </h2>
+
+            <div class="contact__page container grid">
+               <form action="" class="contact__form grid" id="contact-form">
+                  <div class="contact__group grid">
+                     <div class="contact__box">
+                        <input type="text" name="user_name" id="name" required placeholder="Write your name" class="contact__input">
+                        <lable for="name" class="contact__lable">First Name</lable>
+                     </div>
+
+                     <div class="contact__box">
+                        <input type="email" name="user_email" id="email" required placeholder="Write your email" class="contact__input">
+                        <lable for="email" class="contact__lable">Email Address</lable>
+                     </div>
+                  </div>
+
+                  <div class="contact__box contact__area">
+                     <textarea name="user_message" id="message" required placeholder="Write Message" class="contact__input"></textarea>
+                     <lable for="message" class="contact__lable">Message</lable>
+                  </div>
+
+
+                  <p class="contact__message" id="contact-message"></p>
+
+                  <button type="submit" class="contact_send button">Send Message</button>
+
+               </form>
+            </div>
+
          </section>
       </main>
 
@@ -73,7 +104,7 @@
       <script src="assets/js/main.js"></script>
       
       <!--=============== EMAIL JS ===============-->
-      
+      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
       
       <!--=============== CONTACT JS ===============-->
       <script src="assets/js/contact.js"></script>
