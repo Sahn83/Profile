@@ -7,7 +7,7 @@ const sendEmail = (e) => {
     e.preventDefault()
 
     // serviceID - templateID - #form - publicKey
-    emailjs.sendForm('service_cle7z4v','template_3r5l7ap','#contact-form','-K8sDq-H03DFffifw')
+    emailjs.sendForm('service_lugonn1', 'template_3r5l7ap','#contact-form','-K8sDq-H03DFffifw')
     .then(() =>  {
         //show sent message
         contactMessage.textContent = 'Message sent successfully ✅'
@@ -15,7 +15,13 @@ const sendEmail = (e) => {
         // Remove message after five seconds
         setTimeout(() => {
             contactMessage.textContent = ''
-        }, 5000)
+        }, 5000)   
+
+        //clear input field
+        contactForm.reset()
+    }, () => {
+        //show error message
+        contactMessage.textContent = 'Message not sent (service error) ❌'
     })
 }
 
