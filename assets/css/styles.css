@@ -124,7 +124,7 @@ img {
 }
 
 .change-theme{
-  color: var(--first-color);
+  color: rgb(125, 97, 4);
   font-size: 1.25rem;
   cursor: pointer;
   transition: color .4s;
@@ -133,11 +133,12 @@ img {
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme{
-  --title-color: hsl(var(--hue), 24%, 85%);
-  --text-color: hsl(var(--hue), 8%, 70%);
-  --body-color: hsl(var(--hue), 16%, 8%);
-  --container-color: hsl(var(--hue), 16%, 12%);
+  --title-color: rgb(51, 51, 51);
+  --text-color: rgb(183, 32, 32);
+  --body-color: rgb(51, 51, 51);
+  --container-color: b(51, 51, 51);;
   --shadow-color: hsla(var(--hue), 32%, 4%, .4);
+  
 }
 
 /*========== 
@@ -183,9 +184,23 @@ body.dark-theme{
   font-size: var(--h1-font-size);
   text-align: center;
   margin-bottom: 2rem;
+  
 }
 
 .perfil{
+  margin-left: 400px;
+  width: 250px;
+  height: 250px;
+  background-color: var(--body-color);
+  border: 8px solid green;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: background-color .4s;
+}
+
+.perfilabout{
+  margin-left: 290px;
   width: 250px;
   height: 250px;
   background-color: var(--body-color);
@@ -225,15 +240,42 @@ body.dark-theme{
 /*=============== HEADER & NAV ===============*/
 .header{
   
-  height: 100px;
-  /* position: fixed; */
+  height: 180px;
+  position: fixed;
   width: 100%;
-  margin-top: 35px;
-  /* left: 0; */
+  margin-top: 700px;
+  left: 0;
   top: -100%;
-  background-color: lightsalmon;
+  background-color: orange;
   z-index: var(--z-fixed);
   transition: background-color .4s, box-shadow .4s;
+}
+
+.nav__list-menu{
+  margin-left: 500px;
+  margin-top: 100px;
+}
+
+
+#Home {
+  margin-top: 120px;
+  margin-left: 55px;
+}
+
+
+#About_Me{
+  margin-left: 40px;
+  margin-top: 10px; 
+}
+
+#Portfolio{
+  margin-left: 47px;
+  margin-top: 10px;
+}
+
+#Contact_Me{
+  margin-left: 5px;
+  margin-top: -4px;
 }
 
 
@@ -272,7 +314,7 @@ body.dark-theme{
 /* Navigation for mobile devices */
 @media screen and (max-width: 1150px) {
  .nav__menu{
-  position: fixed;
+  /* position: fixed; */
   top: -100%;
   left: 0;
   background-color: var(--body-color);
@@ -289,12 +331,25 @@ body.dark-theme{
   flex-direction: coloum;
   row-gap: 2.5rem;
   text-align: center;
+
+}
+
+
+
+
+.nav__list{
+  display: flex;
+  flex-direction: coloum;
+  row-gap: 2.5rem;
+  text-align: center;
+  
 }
 
 .nav__link{
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
   transition: color .4s;
+  
 }
 
 .nav__link:hover{
@@ -338,10 +393,11 @@ body.dark-theme{
 /*=============== BUTTON ===============*/
 .button{
   display: inline-block;
-  background-color: var(--first-color);
+  background-color: orange;
   color: var(--white-color);
   font-weight: var(--font-semi-bold);
   padding: 1rem 2rem;
+  margin-top: 10px;
   transition: background-color .4s, box-shadow .4s;
 }
 
@@ -354,15 +410,15 @@ body.dark-theme{
 /*=============== HOME ===============*/
 .home{
   position: relative;
-  border-bottom: 8px solid var(--first-color);
-  margin-top: 200px;
+  border-bottom: 8px solid orange;
+   margin-top:200px;
 }
 
 
 .home__rectangle{
   width: 100%;
   height: 220px;
-  background-color: var(--first-color);
+  background-color: rgb(131, 128, 122);
   position: absolute;
   top: 0;
   left: 0;
@@ -372,6 +428,8 @@ body.dark-theme{
 
 .home__container{
   padding-block: 1rem 3rem;
+  margin-top: -70px;
+  
 }
 
 
@@ -381,6 +439,8 @@ body.dark-theme{
 
 .home__content{
   row-gap: 3rem;
+  margin-left: 100px;
+  margin-top: -30px;
 }
 
 .home__data{
@@ -391,16 +451,20 @@ body.dark-theme{
 
 .home__name{
   font-size: var(--biggest-font-size);
+  margin-left: 300px;
 }
 
 .home__profession{
   font-size: var(--h2-font-size);
+  margin-left: 300px;
 }
 
 .home__social{
   display: flex;
   justify-content: center;
   column-gap: 1rem;
+  margin-left: 300px;
+  
 }
 
 .home__social-link{
@@ -415,8 +479,17 @@ body.dark-theme{
 }
 
 .home__button{
+  margin-top: -25px;
   justify-content: center;
+  margin-left: 300px;
+  /* content: "Download My Resume"; */
 }
+
+.home__button::before {
+  content: "Download My Resume"; /* Adjust text here */
+  margin-left: 225px;
+}
+
 
 /*=============== ABOUT ===============*/
 
@@ -430,6 +503,7 @@ body.dark-theme{
 
 .about__content{
   row-gap: 4rem;
+  margin-left: 280px;
 }
 
 .about__data{
@@ -485,15 +559,21 @@ body.dark-theme{
   }
 /*=============== SERVICES ===============*/
 .services__container{
-  row-gap: 2rem
+  row-gap: 2rem;
+  display : flex; 
+  justify-content : space-around; 
+  margin-left: 205px;
+
 }
 
 .services__card{
   background-color: var(--container-color);
   padding: 3.5rem 1.5rem;
-  box-shadow: 0 12px 24px var(--shadow-color);
+  box-shadow: 0 12px 24px grey;
   text-align: center;
   transition: background-color .4s;
+  flex: 1; 
+  
 }
 
 .services__icon{
@@ -531,7 +611,7 @@ body.dark-theme{
   opacity: 0;
   visibility: hidden;
   z-index: var(--z-modal);
-  transition: opacity 4s, visibility .4s;
+  transition: opacity .5s, visibility .2s;
   }
   
   .services__modal-content{
@@ -605,9 +685,26 @@ body.dark-theme{
 
 
 /*=============== WORK ===============*/
-.work__container{
+.work__container {
   row-gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 200px;
+  
 }
+
+.work__card {
+  background-color: orange;
+  padding: 3.5rem 1.5rem;
+  box-shadow: 0 12px 24px var(--shadow-color);
+  text-align: center;
+  transition: background-color .4s;
+  flex-basis: calc(33.33% - 2rem); /* Set flex basis to one-third minus margin */
+  margin-bottom: 2rem; /* Add spacing between rows */
+}
+
+
 
 .work__link{
   display: inline-block;
@@ -704,6 +801,7 @@ body.dark-theme{
 /*=============== CONTACT ===============*/
 .contact__container{
   padding-bottom: 4rem;
+  margin-left: 220px;
 }
 
 .contact__button{
@@ -712,17 +810,19 @@ body.dark-theme{
 
 .contact__page{
   padding-block: 1rem 4rem;
+  margin-left: 250px;
 }
 
 .contact__form{
   position: relative;
+ 
 }
 
 .contact__box{
   position: relative;
   width: 100%;
   height: 58px;
-  background-color: rgb(220, 158, 158);
+  background-color: rgb(182, 123, 123);
 }
 
 .contact__input{
@@ -791,7 +891,7 @@ body.dark-theme{
 
 /*=============== FOOTER ===============*/
 .footer{
-  background-color: var(--first-color);
+  background-color: orange;
 
 }
 
@@ -799,6 +899,7 @@ body.dark-theme{
   padding-block: 4rem 2rem;
   text-align: center;
   row-gap: 5rem;
+  margin-left: 230px;
 }
 
 .footer__content{
@@ -989,6 +1090,24 @@ body.dark-theme{
 }
 
 /* For large devices */
+@media screen and (min-width: 1150px) {
 
+  .container{
+    margin-inline: auto;
+  }
+
+  .section{
+    padding-bottom: 3.5rem;
+  }
+
+  .section__title{
+    margin-bottom: 3.5rem;
+  }
+
+  
+
+  
+
+}
 
 /* For 2K resolutions (2048 x 1152, 2048 x 1536) */
