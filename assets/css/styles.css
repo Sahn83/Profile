@@ -516,20 +516,22 @@ body.dark-theme{
 .about__info{
   row-gap: .75rem;
   text-align: center;
-}
-
-.about__name{
-  font-size: var(--h1-font-size);
   
 }
 
+.about__name{
+  /* font-size: var(--h1-font-size); */
+    
+}
+
 .about__profession{
-  font-size: var(--h2-font-size);
+  font-size: var(--h4-font-size);
   
 }
 
 .about__description b{
   color: var(--first-color);
+  
   }
 
 
@@ -560,6 +562,61 @@ body.dark-theme{
   gap: 2rem 1.5rem;
   
   }
+
+/*=============== ABOUT EDUCATION ===============*/
+
+.all-education-container {
+  display: flex;
+}
+.education-container {
+  border: 10px solid #ddd;
+  border-radius: 199px;
+  padding: 50px;
+  margin-bottom: 20px;
+  background-color: rgb(195, 190, 182);
+  width: 130%;
+  /* margin-left: -200%; */
+  display : flex; 
+}
+
+.education-list {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  margin-left: -17px;
+  margin-top: 20px;
+}
+
+.education-item {
+  margin-bottom: 15px;
+  
+}
+
+.education-item h3,
+.education-item h4 {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.education-item p {
+  margin-bottom: 10px;
+}
+
+.education-item ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.education-item ul li {
+  margin-bottom: 5px;
+}
+
+
+
+
+
+
 /*=============== SERVICES ===============*/
 .services__container{
   row-gap: 2rem;
