@@ -242,8 +242,7 @@ body.dark-theme{
 }
 
 /*=============== HEADER & NAV ===============*/
-.header{
-  
+.header {
   height: 180px;
   position: fixed;
   width: 100%;
@@ -251,37 +250,41 @@ body.dark-theme{
   left: 0;
   top: -100%;
   background-color: rgb(156, 203, 236);
-  box-shadow: 0px 0px 15px rgba(10,10, 600, 5);
+  box-shadow: 0px 0px 15px rgba(10, 10, 600, 5);
   z-index: var(--z-fixed);
-  transition: background-color .4s, box-shadow .4s;
+  transition: background-color 0.4s, box-shadow 0.4s;
 }
 
-.nav__list-menu{
-  margin-left: 480px;
+.nav__list-menu {
+  margin-left: 380px;
   margin-top: 130px;
-  
+
+}
+
+.nav__list-menu .nav__item {
+  display: inline-block; /* Display the list items horizontally */
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px; /* Adjust the spacing between the buttons */
 }
 
 
 #Home {
-  margin-top: 50px;
-  margin-left: 55px;
+  
 }
 
 
 #About_Me{
-  margin-left: 40px;
-  margin-top: 10px; 
+ 
 }
 
 #Portfolio{
-  margin-left: 47px;
-  margin-top: 10px;
+  
 }
 
 #Contact_Me{
-  margin-left: 5px;
-  margin-top: -4px;
+  
 }
 
 
@@ -319,21 +322,19 @@ body.dark-theme{
 
 /* Navigation for mobile devices */
 @media screen and (max-width: 1150px) {
- .nav__menu{
-  position: fixed;
-  top: -100%;
-  left: 0;
-  background-color: var(--body-color);
-  width: 100%;
-  box-shadow: 0 12px 24px var(--shadow-color);
-  padding-block: 5rem 4rem;
-  transition: top .4s;
-  
+  .nav__menu{
+   position: fixed;
+   top: -100%;
+   left: 0;
+   background-color: var(--body-color);
+   width: 100%;
+   box-shadow: 0 12px 24px var(--shadow-color);
+   padding-block: 5rem 4rem;
+   transition: top .4s;
+ }
+ }
 
-}
-}
-
-.nav__list{
+ .nav__list {
   display: flex;
   flex-direction: coloum;
   row-gap: 2.5rem;
@@ -341,25 +342,14 @@ body.dark-theme{
 
 }
 
-
-
-
-.nav__list{
-  display: flex;
-  flex-direction: coloum;
-  row-gap: 2.5rem;
-  text-align: center;
-  
-}
-
-.nav__link{
+.nav__link {
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
   transition: color .4s;
-  
+
 }
 
-.nav__link:hover{
+.nav__link:hover {
   color: lightsalmon;
 }
 
@@ -404,13 +394,13 @@ body.dark-theme{
   color: var(--white-color);
   font-weight: var(--font-semi-bold);
   padding: 1rem 2rem;
-  margin-top: 10px;
+  margin-top: 1px;
   transition: background-color .4s, box-shadow .4s;
 }
 
 .button:hover{
       background-color: lightsalmon;
-    box-shadow: 0 8px 24px hsla(var(--hue), 90%, 30%, .3);
+      box-shadow: 0 8px 24px hsla(var(--hue), 90%, 30%, .3);
   }
 
 
