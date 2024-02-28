@@ -26,6 +26,20 @@ modalClose.forEach((modalClose) => {
 
 
 
+// translate 
+
+
+
+
+  
+
+
+
+
+
+
+
+
 /*=============== SWIPER TESTIMONIAL ===============*/
 const swiperTestimonial = new Swiper('.testimonial__swiper', {
     

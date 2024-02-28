@@ -133,12 +133,12 @@ img {
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme{
-  --title-color: rgb(51, 51, 51);
-  --text-color: rgb(183, 32, 32);
+  --title-color: rgb(93, 112, 93);
+  --text-color: green;
   --body-color: rgb(51, 51, 51);
   --container-color: b(51, 51, 51);;
   --shadow-color: hsla(var(--hue), 32%, 4%, .4);
-  
+    
 }
 
 /*========== 
@@ -147,6 +147,7 @@ body.dark-theme{
 ==========*/
 .dark-theme .bg-header{
   box-shadow: 0 12px 24px var(--shadow-color);
+  
 }
 
 .dark-theme .services__modal{
@@ -240,6 +241,69 @@ body.dark-theme{
 .main {
   overflow: hidden;
 }
+
+
+/* Translate */
+/* Styles for Google Translate dropdown */
+#google_translate_element {
+  display: inline-block; /* Ensure it's displayed inline */
+}
+
+.goog-te-gadget {
+  color: #333; /* Text color */
+  border: 1px solid #cccccc; /* Border color */
+  border-radius: 4px; /* Border radius */
+  font-family: Arial, sans-serif; 
+  margin-left: 1250px;
+  margin-top: -35px;
+  width: 13%;
+
+}
+
+
+
+.goog-te-gadget select {
+  width: 180px; 
+  padding: 5px; 
+  font-size: 14px; 
+  background-color: #f5efef; 
+}
+
+.goog-te-gadget-icon {
+  display: none; /* Hide the language icon */
+}
+
+.goog-te-gadget-simple {
+  background-color: #fff; /* Background color */
+  border: none; /* Remove border */
+  
+}
+
+.goog-te-menu-value {
+  padding: 8px 10px; /* Add padding */
+  
+}
+
+.goog-te-menu2 {
+  max-height: 300px; /* Limit max height of the dropdown */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.goog-te-menu2-item {
+  padding: 5px 10px; /* Add padding */
+  font-size: 14px; /* Font size */
+}
+
+.goog-te-menu2-item:hover {
+  background-color: #f0f0f0; /* Hover background color */
+}
+
+.goog-te-menu2-item-selected {
+  background-color: #e0e0e0; /* Selected item background color */
+}
+
+
+
 
 /*=============== HEADER & NAV ===============*/
 .header {
